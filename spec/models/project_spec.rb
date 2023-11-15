@@ -18,12 +18,17 @@ RSpec.describe Project, type: :model do
 
     end
 
-    describe "Teste de validaçãodo model Project" do
+    describe "Teste de validação do model Project" do
 
         it "Project valido com campos obrigatorios preenchidos?" do
             @project.name ="react_frontend"
             @project.tool = "react"
             expect(@project).to be_valid
+        end
+
+        it "Project invalido com campos obrigatorios não preenchidos?" do
+            project = Project.new
+            expect(project).to be_valid
         end
     end
 end
