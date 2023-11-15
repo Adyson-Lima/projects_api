@@ -2,7 +2,7 @@ require "rails_helper"
 
 class Api::V1::ProjectsController < ApplicationController
 
-  before_action :set_project, only: %i[show update] #show update destroy
+  before_action :set_project, only: %i[show update destroy] #show update destroy
 
   def index
     @projects = Project.all
@@ -28,6 +28,10 @@ class Api::V1::ProjectsController < ApplicationController
     else
       render json: @project.errors, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @project.destroy!
   end
 
 private
