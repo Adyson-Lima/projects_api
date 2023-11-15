@@ -288,48 +288,28 @@ a {
   <dl style="margin-left: 15px;">
   <dt id="example_group_2" class="passed">GET /api/v1/projects</dt>
     <script type="text/javascript">moveProgressBar('12.5');</script>
-    <dd class="example passed"><span class="passed_spec_name">Consegue listar todos os projects e retornar status 200?</span><span class='duration'>0.03946s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">Consegue listar todos os projects e retornar status 200?</span><span class='duration'>0.03940s</span></dd>
   </dl>
 </div>
 <div id="div_group_3" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_3" class="passed">GET /api/v1/projects/id</dt>
     <script type="text/javascript">moveProgressBar('25.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">Consegue listar um project especifico e retornar status 200?</span><span class='duration'>0.00531s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">Consegue listar um project especifico e retornar status 200?</span><span class='duration'>0.00530s</span></dd>
   </dl>
 </div>
 <div id="div_group_4" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_4" class="passed">POST /api/v1/projects</dt>
     <script type="text/javascript">moveProgressBar('37.5');</script>
-    <dd class="example passed"><span class="passed_spec_name">Consegue criar um project e retornar status 201?</span><span class='duration'>0.00822s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">Consegue criar um project e retornar status 201?</span><span class='duration'>0.00864s</span></dd>
   </dl>
 </div>
 <div id="div_group_5" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_5" class="passed">PATCH /api/v1/projects/id</dt>
-    <script type="text/javascript">makeRed('rspec-header');</script>
-    <script type="text/javascript">makeRed('div_group_5');</script>
-    <script type="text/javascript">makeRed('example_group_5');</script>
     <script type="text/javascript">moveProgressBar('50.0');</script>
-    <dd class="example failed">
-      <span class="failed_spec_name">Consegue atualizar um project e retornar status 200?</span>
-      <span class="duration">0.00431s</span>
-      <div class="failure" id="failure_1">
-        <div class="message"><pre>  Failure/Error: patch :update, params: {project: {name: &quot;react_frontend&quot;, tool: &quot;react&quot;}, id: project.id}
-
-  AbstractController::ActionNotFound:
-    The action &#39;update&#39; could not be found for Api::V1::ProjectsController
-  # ./spec/controllers/v1/projects_controller_v1_spec.rb:34:in `block (3 levels) in &lt;top (required)&gt;&#39;</pre></div>
-        <div class="backtrace"><pre>./spec/controllers/v1/projects_controller_v1_spec.rb:34:in `block (3 levels) in &lt;top (required)&gt;&#39;</pre></div>
-    <pre class="ruby"><code><span class="linenum">32</span>      it "Consegue atualizar um project e retornar status 200?" do
-<span class="linenum">33</span>        project = Project.last
-<span class="offending"><span class="linenum">34</span>        patch :update, params: {project: {name: "react_frontend", tool: "react"}, id: project.id}</span>
-<span class="linenum">35</span>        expect(response.body).to include_json(name: "react_frontend")
-<span class="linenum">36</span>        expect(response).to have_http_status(200)
-<span class="linenum">37</span><span class="comment"># Install the coderay gem to get syntax highlighting</span></code></pre>
-      </div>
-    </dd>
+    <dd class="example passed"><span class="passed_spec_name">Consegue atualizar um project e retornar status 200?</span><span class='duration'>0.00726s</span></dd>
   </dl>
 </div>
 <div id="div_group_6" class="example_group passed">
@@ -341,7 +321,7 @@ a {
   <dl style="margin-left: 15px;">
   <dt id="example_group_7" class="passed">Teste de preenchimento dos campos do model Project</dt>
     <script type="text/javascript">moveProgressBar('62.5');</script>
-    <dd class="example passed"><span class="passed_spec_name">name consegue ser preenchido?</span><span class='duration'>0.00088s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">name consegue ser preenchido?</span><span class='duration'>0.00075s</span></dd>
     <script type="text/javascript">moveProgressBar('75.0');</script>
     <dd class="example passed"><span class="passed_spec_name">tool consegue ser preenchido?</span><span class='duration'>0.00061s</span></dd>
   </dl>
@@ -350,13 +330,13 @@ a {
   <dl style="margin-left: 15px;">
   <dt id="example_group_8" class="passed">Teste de validação do model Project</dt>
     <script type="text/javascript">moveProgressBar('87.5');</script>
-    <dd class="example passed"><span class="passed_spec_name">Project valido com campos obrigatorios preenchidos?</span><span class='duration'>0.00069s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">Project valido com campos obrigatorios preenchidos?</span><span class='duration'>0.00066s</span></dd>
     <script type="text/javascript">moveProgressBar('100.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">Project invalido com campos obrigatorios não preenchidos?</span><span class='duration'>0.00139s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">Project invalido com campos obrigatorios não preenchidos?</span><span class='duration'>0.00140s</span></dd>
   </dl>
 </div>
-<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0.07480 seconds</strong>";</script>
-<script type="text/javascript">document.getElementById('totals').innerHTML = "8 examples, 1 failure";</script>
+<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0.06840 seconds</strong>";</script>
+<script type="text/javascript">document.getElementById('totals').innerHTML = "8 examples, 0 failures";</script>
 </div>
 </div>
 </body>
