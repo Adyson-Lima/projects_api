@@ -20,4 +20,12 @@ RSpec.describe Api::V1::ProjectsController, type: :controller do
       end
     end
 
+    describe "POST /api/v1/projects" do
+      it "Consegue criar um project e retornar status 201?" do
+        post :create, params: {project: {name: "laravel_ecommerce", tool: "laravel"}, format: :json}
+        expect(response.body).to include_json(name: "laravel_ecommerce")
+        expect(response).to have_http_status(201)
+      end
+    end
+
 end
