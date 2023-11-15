@@ -11,5 +11,10 @@ RSpec.describe Project, type: :model do
             expect(@project.name).to eq("api rails")
         end
 
+        it "tool consegue ser preenchido?" do
+            @project.tool = ""
+            expect(@project.tool).to eq("rails")
+        end
+
     end
 end
