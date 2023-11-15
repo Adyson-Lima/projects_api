@@ -28,7 +28,7 @@ RSpec.describe Project, type: :model do
 
         it "Project invalido com campos obrigatorios não preenchidos?" do
             project = Project.new
-            expect(project).to be_valid
+            expect(project).to be_invalid
         end
     end
 end
