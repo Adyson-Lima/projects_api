@@ -28,4 +28,13 @@ RSpec.describe Api::V1::ProjectsController, type: :controller do
       end
     end
 
+    describe "PATCH /api/v1/projects/id" do
+      it "Consegue atualizar um project e retornar status 200?" do
+        project = Project.last
+        patch :update, params: {project: {name: "react_frontend", tool: "react"}, id: project.id}
+        expect(response.body).to include_json(name: "react_frontend")
+        expect(response).to have_http_status(200)
+      end
+    end
+
 end
