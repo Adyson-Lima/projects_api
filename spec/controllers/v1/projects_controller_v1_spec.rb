@@ -37,4 +37,13 @@ RSpec.describe Api::V1::ProjectsController, type: :controller do
       end
     end
 
+    describe "DELETE PATCH /api/v1/projects/id" do
+      it "Consegue excluir um projeto e retornar status 204?" do
+        project = Project.last
+        delete :destroy, params: {id: project.id}
+        expect(Project.all).not_to include(project)
+        expect(response).to have_http_status(204)
+      end
+    end
+
 end
