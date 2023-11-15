@@ -13,6 +13,15 @@ class Api::V1::ProjectsController < ApplicationController
     render json: @project
   end
 
+  def create
+    @project = Project.new(project_params)
+    if @project.save
+      render json: @project, status: :created, location: api_v1_project_url(@project)
+    else
+      render json: @project.errors, status: :unprocessable_entity
+    end
+  end
+
 private
 
 def set_project
