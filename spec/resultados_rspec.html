@@ -288,38 +288,20 @@ a {
   <dl style="margin-left: 15px;">
   <dt id="example_group_2" class="passed">Teste de preenchimento dos campos do model Project</dt>
     <script type="text/javascript">moveProgressBar('33.3');</script>
-    <dd class="example passed"><span class="passed_spec_name">name consegue ser preenchido?</span><span class='duration'>0.02540s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">name consegue ser preenchido?</span><span class='duration'>0.02624s</span></dd>
     <script type="text/javascript">moveProgressBar('66.6');</script>
-    <dd class="example passed"><span class="passed_spec_name">tool consegue ser preenchido?</span><span class='duration'>0.00071s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">tool consegue ser preenchido?</span><span class='duration'>0.00072s</span></dd>
   </dl>
 </div>
 <div id="div_group_3" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_3" class="passed">Teste de validaçãodo model Project</dt>
-    <script type="text/javascript">makeRed('rspec-header');</script>
-    <script type="text/javascript">makeRed('div_group_3');</script>
-    <script type="text/javascript">makeRed('example_group_3');</script>
     <script type="text/javascript">moveProgressBar('100.0');</script>
-    <dd class="example failed">
-      <span class="failed_spec_name">Project valido com campos obrigatorios preenchidos?</span>
-      <span class="duration">1.54516s</span>
-      <div class="failure" id="failure_1">
-        <div class="message"><pre>  Failure/Error: expect(@project).to be_valid
-    expected #&lt;Project id: nil, name: &quot;&quot;, tool: &quot;&quot;, created_at: nil, updated_at: nil&gt; to be valid, but got errors: Name can&#39;t be blank, Tool can&#39;t be blank
-  # ./spec/models/project_spec.rb:26:in `block (3 levels) in &lt;top (required)&gt;&#39;</pre></div>
-        <div class="backtrace"><pre>./spec/models/project_spec.rb:26:in `block (3 levels) in &lt;top (required)&gt;&#39;</pre></div>
-    <pre class="ruby"><code><span class="linenum">24</span>            @project.name =""
-<span class="linenum">25</span>            @project.tool = ""
-<span class="offending"><span class="linenum">26</span>            expect(@project).to be_valid</span>
-<span class="linenum">27</span>        end
-<span class="linenum">28</span>    end
-<span class="linenum">29</span><span class="comment"># Install the coderay gem to get syntax highlighting</span></code></pre>
-      </div>
-    </dd>
+    <dd class="example passed"><span class="passed_spec_name">Project valido com campos obrigatorios preenchidos?</span><span class='duration'>0.00079s</span></dd>
   </dl>
 </div>
-<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>1.58080 seconds</strong>";</script>
-<script type="text/javascript">document.getElementById('totals').innerHTML = "3 examples, 1 failure";</script>
+<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0.03037 seconds</strong>";</script>
+<script type="text/javascript">document.getElementById('totals').innerHTML = "3 examples, 0 failures";</script>
 </div>
 </div>
 </body>
