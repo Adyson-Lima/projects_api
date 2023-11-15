@@ -12,7 +12,7 @@ RSpec.describe Project, type: :model do
         end
 
         it "tool consegue ser preenchido?" do
-            @project.tool = ""
+            @project.tool = "rails"
             expect(@project.tool).to eq("rails")
         end
 
