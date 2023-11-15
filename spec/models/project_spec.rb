@@ -7,7 +7,7 @@ RSpec.describe Project, type: :model do
     describe "Teste de preenchimento dos campos do model Project" do
 
         it "name consegue ser preenchido?" do
-            @project.name = ""
+            @project.name = "api rails"
             expect(@project.name).to eq("api rails")
         end
 
