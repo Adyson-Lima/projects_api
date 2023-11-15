@@ -1,5 +1,3 @@
-require "rails_helper"
-
 class Api::V1::ProjectsController < ApplicationController
 
   before_action :set_project, only: %i[show update destroy] #show update destroy
